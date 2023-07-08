@@ -3,6 +3,11 @@ const cors = require("cors");
 const JDB = require("jsoneng");
 const app = express();
 const db = new JDB("./jdb");
+const http = require("http");
+const setupWebSocket = require("./setupWebSocket");
+
+const server = http.createServer(app);
+setupWebSocket(server);
 
 app.use(express.json());
 app.use(cors());
