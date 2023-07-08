@@ -1,5 +1,5 @@
 # jsoneng-api
-Jsoneng API service, powered by [jsoneng javascript edition] (https://www.npmjs.com/package/jsoneng), for use in community open source projects
+Jsoneng API service, powered by (jsoneng javascript edition) [https://www.npmjs.com/package/jsoneng], for use in community open source projects
 
 This is a wrapper around the jsoneng local json database engine npm package
 
