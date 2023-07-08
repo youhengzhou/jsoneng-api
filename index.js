@@ -20,7 +20,7 @@ app.get("/wait", async (req, res) => {
         if (client.readyState === WebSocket.OPEN) {
           const data = await db.read(req.query.dirname);
 
-          console.log(data);
+          //   console.log(data);
 
           console.log("we are now sending data to client");
           time += 1;
@@ -30,11 +30,11 @@ app.get("/wait", async (req, res) => {
         }
       });
     }
-    let i = 0;
-    while (i < 1000) {
-      setTimeout(sendData, 5000);
-      i += 1;
-    }
+    // let i = 0;
+    // while (i < 5000000) {
+    setInterval(sendData, 1000);
+    //   i += 1;
+    // }
   } catch (error) {}
 });
 
