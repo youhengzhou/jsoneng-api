@@ -1,9 +1,11 @@
 const express = require("express");
+const cors = require("cors");
 const JDB = require("jsoneng");
 const app = express();
 const db = new JDB("./jdb");
 
 app.use(express.json());
+app.use(cors());
 
 app.post("/create", async (req, res) => {
   try {
