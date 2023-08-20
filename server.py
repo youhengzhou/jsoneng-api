@@ -1,7 +1,7 @@
 import asyncio
 import websockets
 import jsoneng
-import GrandStrategyGame
+import MockDB
 
 jdb = jsoneng.JsonDB()
 
@@ -11,7 +11,7 @@ async def echo(websocket, path):
         print(f"Received: {message}")
 
         if message:
-            GrandStrategyGame.gen()
+            MockDB.gen()
             out = jdb.retrieve("test0")
         print(out)
         await websocket.send(str(out))
